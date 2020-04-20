@@ -7,7 +7,7 @@ Requires the [Simscape Foundation Libraries](https://www.mathworks.com/help/phys
 
 Double click anywhere in a simulink diagram and type
 
-`ammeter`, `voltmeter`, or `ohmmeter` (or `[current|voltage|resistance] probe`).
+`[current|voltage|resistance] probe` (or `ammeter`, `voltmeter`, `ohmmeter`).
 
 ### Before:
 ![Without current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_before.png "Before")
