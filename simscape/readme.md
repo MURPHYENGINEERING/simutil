@@ -10,7 +10,7 @@ Double click anyway in a simulink diagram and type "ammeter", "voltmeter", or "o
 ![Current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe.png)
 
 Before:
-![Without current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_before.png)
+![Without current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_before.png "Before")
 
 After:
-![With current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_after.png)
+![With current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_after.png "After")
