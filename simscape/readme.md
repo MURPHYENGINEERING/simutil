@@ -1,5 +1,7 @@
 # Simscape Electrical Probes
 
+![Package](https://www.murphyengineer.com/images/simutil/simscape_electrical_probes.png "Package")
+
 Requires the [Simscape Foundation Libraries](https://www.mathworks.com/help/physmod/simscape/ug/introducing-the-simscape-block-libraries.html).
 
 [Add the folder to your matlab path](https://www.mathworks.com/help/matlab/ref/addpath.html) and refresh the simulink block library. 
