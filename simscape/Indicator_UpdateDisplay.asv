@@ -1,0 +1,33 @@
+function Indicator_UpdateDisplay(block)
+  setup(block);
+end
+
+function setup(block)
+  block.NumInputPorts  = 2;
+  block.NumOutputPorts = 1;
+
+  block.SetPreCompInpPortInfoToDynamic;
+  block.SetPreCompOutPortInfoToDynamic;
+
+  %% Inherited
+  block.SampleTimes = [-1 0];
+
+  block.SimStateCompliance = 'DefaultSimState';
+  block.SetAccelRunOnTLC(true);
+
+  block.RegBlockMethod('Outputs', @Output);
+end
+
+function Output(block)
+  amps = block.InputPort(1).Data;
+  volts = block.InputPort(2).Data;
+  
+  amps_str = double(str2double(amps);
+  volts_str = double(str2num(volts));
+ 
+  mask = get_param(block.BlockHandle,'Parent');
+  set_param(bdroot,'SimulationCommand','pause')
+  set_param(mask, 'amps', amps_str);
+  set_param(mask, 'volts', volts_str);
+  set_param(bdroot,'SimulationCommand','continue')
+end
