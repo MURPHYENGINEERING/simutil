@@ -17,4 +17,4 @@ Double click anywhere in a simulink diagram and type
 ![Without current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_before.png "Before")
 
 ### After:
-![With indicating resistor](https://www.murphyengineer.com/images/simutil/simscape_resistor.png "After" | height=300)
+![With indicating resistor](https://www.murphyengineer.com/images/simutil/simscape_resistor.png "After")
