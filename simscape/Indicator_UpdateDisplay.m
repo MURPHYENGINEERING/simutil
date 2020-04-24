@@ -26,6 +26,6 @@ function Output(block)
   volts_str = volts;
  
   mask = get_param(block.BlockHandle,'Parent');
-  set_param(mask, 'amps', num2str(double(amps_str)));
-  set_param(mask, 'volts', num2str(double(volts_str)));
+  set_param(mask, 'amps', num2str(round(amps_str, 2)));
+  set_param(mask, 'volts', num2str(round(volts_str, 2)));
 end
