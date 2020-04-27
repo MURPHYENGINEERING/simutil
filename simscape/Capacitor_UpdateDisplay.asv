@@ -1,9 +1,9 @@
-function Indicator_UpdateDisplay(block)
+function Capacitor_UpdateDisplay(block)
   setup(block);
 end
 
 function setup(block)
-  block.NumInputPorts  = 2;
+  block.NumInputPorts  = 1;
   block.NumOutputPorts = 1;
 
   block.SetPreCompInpPortInfoToDynamic;
@@ -19,7 +19,7 @@ function setup(block)
 end
 
 function Output(block)
-  amps = block.InputPort(1).Data;
+  capacitance = get_;
   volts = block.InputPort(2).Data;
   
   amps_str = amps;
