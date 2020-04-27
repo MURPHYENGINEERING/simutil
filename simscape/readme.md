@@ -13,6 +13,8 @@ Double click anywhere in a simulink diagram and type
 
 `indicating resistor`
 
+`indicating capacitor`
+
 ### Before:
 ![Without current probe](https://www.murphyengineer.com/images/simutil/simscape_currentprobe_before.png "Before")
 
