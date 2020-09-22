@@ -24,33 +24,25 @@ end
 function Output(block)
   value = block.InputPort(1).Data;
   unit = block.DialogPrm(1).Data;
-  suffix = '';
   
   if ~strcmpi(unit, 'ohm')
     % Amps or Volts
+    [value, prefix] = getMetricPrefix(value);
     value_str = num2str(value);
   else
     % Ohm symbol
     unit = char(hex2dec('03A9'));
-    if (value < 0)
+    %if (value < 0)
       % Probably connected to voltage
-      value_str = '?';
-    else
-      suffixes = ['k', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'];
-      for i = 1:length(suffixes)
-        if value < 1000
-          break
-        end
-        value = value / 1000;
-        suffix = suffixes(i);
-      end
-      % Update value string after decimating
-      value_str = num2str(value);
-    end
+    %  value_str = '?';
+    %else
+    % Update value string after decimating
+    value_str = num2str(value);
+    %end
   end
 
   mask_func = [...
-    sprintf('fprintf(''%s%s %s'');\n', value_str, suffix, unit) ...
+    sprintf('fprintf(''%s %s%s'');\n', value_str, prefix, unit) ...
     sprintf('port_label(''lconn'', 1, ''+'');\n') ...
     sprintf('port_label(''rconn'', 1, ''-'');\n') ...
   ];
